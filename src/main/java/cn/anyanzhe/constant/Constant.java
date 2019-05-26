@@ -1,30 +1,15 @@
 package cn.anyanzhe.constant;
 
 public class Constant {
-  /**
-   **********************************
-   ** types of a turning point     **
-   **********************************
-   ** ORDINARY    : ordinary       **
-   ** UP2STABLE   : up -> stable   **
-   ** PEAK        : up -> down     **
-   ** STABLE2UP   : stable -> up   **
-   ** STABLE2DOWN : stable -> down **
-   ** VALLEY      : down -> up     **
-   ** DOWN2STABLE : down -> stable **
-   ** THIRDTP     : thrid tp       **
-   ** ILL         : ill            **
-   **********************************
-   **/
+  //types of a turning point
+
   public static final int ORDINARY    = 0;
-  public static final int UP2STABLE   = 1;
-  public static final int PEAK        = 2;
-  public static final int STABLE2UP   = 3;
-  public static final int STABLE2DOWN = 4;
-  public static final int VALLEY      = 5;
-  public static final int DOWN2STABLE = 6;
-  public static final int THIRDTP     = 7;
-  public static final int ILL         = 8;
+  public static final int PEAK        = 1;
+  public static final int VALLEY      = 2;
+  public static final int SECONDTP    = 3;
+  public static final int THIRDTP     = 4;
+  public static final int LEVELSHIFT  = 5;
+  public static final int ILL         = 6;
 
   /**
    ***********************************

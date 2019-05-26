@@ -13,8 +13,16 @@ public class CsvFileWriter {
       Appendable printWriter = new PrintWriter(filename);
       CSVFormat csvFormat = CSVFormat.DEFAULT.withHeader(Constant.HEADER);
       CSVPrinter csvPrinter = csvFormat.print(printWriter);
-      for (Point point : points) {
-        csvPrinter.printRecord(point.timestamp, Double.toString(point.value), Integer.toString(point.status));
+      int size = points.size();
+      Point currPoint;
+
+      for (int i = 0; i < size; i++) {
+        currPoint = points.get(i);
+        if (currPoint.status != Constant.ORDINARY) {
+          csvPrinter.printRecord(currPoint.timestamp,
+              Double.toString(currPoint.value),
+              Integer.toString(currPoint.status));
+        }
       }
       csvPrinter.flush();
       csvPrinter.close();
