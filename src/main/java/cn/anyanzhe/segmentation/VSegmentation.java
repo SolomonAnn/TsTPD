@@ -27,8 +27,8 @@ public class VSegmentation {
    **/
   private static final String INPUTFILENAME = "dataset\\cycle_time.csv";
   private static final String OUTPUTFILENAME = "dataset\\vc_segmentation.csv";
-  private static final double THETA1 = 1.0;
-  private static final double THETA2 = 1.0;
+  private static final double THETA1 = 2.0;
+  private static final double THETA2 = 2.0;
   private static final int PHI = 10;
   private static final double EPSILON = 2.0;
 

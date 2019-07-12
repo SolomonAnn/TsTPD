@@ -5,11 +5,7 @@ import cn.anyanzhe.fileops.CsvFileReader;
 import cn.anyanzhe.fileops.CsvFileWriter;
 import cn.anyanzhe.point.Point;
 import java.util.ArrayList;
-import java.util.LinkedList;
 import java.util.List;
-import java.util.Map;
-import java.util.Map.Entry;
-import java.util.TreeMap;
 import org.apache.commons.csv.CSVRecord;
 
 public class Segmentation {
@@ -28,10 +24,10 @@ public class Segmentation {
    ** s_segmentation.csv *
    ************************
    **/
-  private static final String INPUTFILENAME = "dataset\\cycle_time.csv";
-  private static final String OUTPUTFILENAME = "dataset\\c_segmentation.csv";
-  private static final double EPSILON = 0.5;
-  private static final double EPSILON1 = 0.5;
+  private static final String INPUTFILENAME = "dataset\\sample.csv";
+  private static final String OUTPUTFILENAME = "dataset\\s_segmentation.csv";
+  private static final double EPSILON = 100.0;
+  private static final double EPSILON1 = 100.0;
   private static final double EPSILON2 = 0.5;
   private static final int THETA = 5;
 
@@ -208,11 +204,11 @@ public class Segmentation {
       }
     }
 
-    if (Math.abs((firstPoint.value - thirdPoint.value)) < EPSILON2 &&
-        Math.abs((secondPoint.value - fourthPoint.value)) < EPSILON2 &&
-        firstPoint.sequence - fourthPoint.sequence < THETA) {
-      return true;
-    }
+//    if (Math.abs((firstPoint.value - thirdPoint.value)) < EPSILON2 &&
+//        Math.abs((secondPoint.value - fourthPoint.value)) < EPSILON2 &&
+//        firstPoint.sequence - fourthPoint.sequence < THETA) {
+//      return true;
+//    }
 
     return false;
   }

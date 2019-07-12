@@ -10,9 +10,9 @@ public class Experiment
 {
 //  private static final String ACCURATE = "random.csv";
 //  private static final String APPROXIMATE = "vrseg.csv";
-//  private static final String ACCURATE = "sample.csv";
-  private static final String ACCURATE = "stock.csv";
-  private static final String APPROXIMATE = "vsegmentation.csv";
+  private static final String ACCURATE = "dataset\\cycle_time.csv";
+//  private static final String ACCURATE = "stock.csv";
+  private static final String APPROXIMATE = "dataset\\vc_segmentation.csv";
 
   private static List<Point> getPoints(String filename) {
     List<Point> points = new ArrayList<>();
